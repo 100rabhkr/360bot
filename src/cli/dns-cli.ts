@@ -134,7 +134,7 @@ export function registerDnsCli(program: Command) {
         }).trimEnd(),
       );
       defaultRuntime.log("");
-      defaultRuntime.log(theme.heading("Recommended ~/.clawdbot/moltbot.json:"));
+      defaultRuntime.log(theme.heading("Recommended ~/.360bot/360bot.json:"));
       defaultRuntime.log(
         JSON.stringify(
           {
