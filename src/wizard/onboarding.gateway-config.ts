@@ -145,7 +145,7 @@ export async function configureGatewayForOnboarding(
   let tailscaleResetOnExit = flow === "quickstart" ? quickstartGateway.tailscaleResetOnExit : false;
   if (tailscaleMode !== "off" && flow !== "quickstart") {
     await prompter.note(
-      ["Docs:", "https://docs.molt.bot/gateway/tailscale", "https://docs.molt.bot/web"].join("\n"),
+      ["Docs:", "https://docs.360bot.com/gateway/tailscale", "https://docs.360bot.com/web"].join("\n"),
       "Tailscale",
     );
     tailscaleResetOnExit = Boolean(

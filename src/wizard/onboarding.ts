@@ -70,7 +70,7 @@ async function requireRiskAcknowledgement(params: {
       "moltbot security audit --deep",
       "moltbot security audit --fix",
       "",
-      "Must read: https://docs.molt.bot/gateway/security",
+      "Must read: https://docs.360bot.com/gateway/security",
     ].join("\n"),
     "Security",
   );
@@ -103,7 +103,7 @@ export async function runOnboardingWizard(
         [
           ...snapshot.issues.map((iss) => `- ${iss.path}: ${iss.message}`),
           "",
-          "Docs: https://docs.molt.bot/gateway/configuration",
+          "Docs: https://docs.360bot.com/gateway/configuration",
         ].join("\n"),
         "Config issues",
       );

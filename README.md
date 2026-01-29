@@ -21,22 +21,22 @@ It answers you on the channels you already use (WhatsApp, Telegram, Slack, Disco
 
 If you want a personal, single-user assistant that feels local, fast, and always-on, this is it.
 
-[Website](https://molt.bot) · [Docs](https://docs.molt.bot) · [Getting Started](https://docs.molt.bot/start/getting-started) · [Updating](https://docs.molt.bot/install/updating) · [Showcase](https://docs.molt.bot/start/showcase) · [FAQ](https://docs.molt.bot/start/faq) · [Wizard](https://docs.molt.bot/start/wizard) · [Nix](https://github.com/moltbot/nix-clawdbot) · [Docker](https://docs.molt.bot/install/docker) · [Discord](https://discord.gg/clawd)
+[Website](https://360bot.com) · [Docs](https://docs.360bot.com) · [Getting Started](https://docs.360bot.com/start/getting-started) · [Updating](https://docs.360bot.com/install/updating) · [Showcase](https://docs.360bot.com/start/showcase) · [FAQ](https://docs.360bot.com/start/faq) · [Wizard](https://docs.360bot.com/start/wizard) · [Nix](https://github.com/moltbot/nix-clawdbot) · [Docker](https://docs.360bot.com/install/docker) · [Discord](https://discord.gg/clawd)
 
 Preferred setup: run the onboarding wizard (`360bot onboard`). It walks through gateway, workspace, channels, and skills. The CLI wizard is the recommended path and works on **macOS, Linux, and Windows (via WSL2; strongly recommended)**.
 Works with npm, pnpm, or bun.
-New install? Start here: [Getting started](https://docs.molt.bot/start/getting-started)
+New install? Start here: [Getting started](https://docs.360bot.com/start/getting-started)
 
 **Subscriptions (OAuth):**
 - **[Anthropic](https://www.anthropic.com/)** (Claude Pro/Max)
 - **[OpenAI](https://openai.com/)** (ChatGPT/Codex)
 
-Model note: while any model is supported, I strongly recommend **Anthropic Pro/Max (100/200) + Opus 4.5** for long‑context strength and better prompt‑injection resistance. See [Onboarding](https://docs.molt.bot/start/onboarding).
+Model note: while any model is supported, I strongly recommend **Anthropic Pro/Max (100/200) + Opus 4.5** for long‑context strength and better prompt‑injection resistance. See [Onboarding](https://docs.360bot.com/start/onboarding).
 
 ## Models (selection + auth)
 
-- Models config + CLI: [Models](https://docs.molt.bot/concepts/models)
-- Auth profile rotation (OAuth vs API keys) + fallbacks: [Model failover](https://docs.molt.bot/concepts/model-failover)
+- Models config + CLI: [Models](https://docs.360bot.com/concepts/models)
+- Auth profile rotation (OAuth vs API keys) + fallbacks: [Model failover](https://docs.360bot.com/concepts/model-failover)
 
 ## Install (recommended)
 
@@ -56,7 +56,7 @@ Legacy note: `clawdbot` remains available as a compatibility shim.
 
 Runtime: **Node ≥22**.
 
-Full beginner guide (auth, pairing, channels): [Getting started](https://docs.molt.bot/start/getting-started)
+Full beginner guide (auth, pairing, channels): [Getting started](https://docs.360bot.com/start/getting-started)
 
 ```bash
 360bot onboard --install-daemon
@@ -70,7 +70,7 @@ Full beginner guide (auth, pairing, channels): [Getting started](https://docs.mo
 360bot agent --message "Ship checklist" --thinking high
 ```
 
-Upgrading? [Updating guide](https://docs.molt.bot/install/updating) (and run `360bot doctor`).
+Upgrading? [Updating guide](https://docs.360bot.com/install/updating) (and run `360bot doctor`).
 
 ## Development channels
 
@@ -79,7 +79,7 @@ Upgrading? [Updating guide](https://docs.molt.bot/install/updating) (and run `36
 - **dev**: moving head of `main`, npm dist-tag `dev` (when published).
 
 Switch channels (git + npm): `360bot update --channel stable|beta|dev`.
-Details: [Development channels](https://docs.molt.bot/install/development-channels).
+Details: [Development channels](https://docs.360bot.com/install/development-channels).
 
 ## From source (development)
 
@@ -105,7 +105,7 @@ Note: `pnpm moltbot ...` runs TypeScript directly (via `tsx`). `pnpm build` prod
 
 Moltbot connects to real messaging surfaces. Treat inbound DMs as **untrusted input**.
 
-Full security guide: [Security](https://docs.molt.bot/gateway/security)
+Full security guide: [Security](https://docs.360bot.com/gateway/security)
 
 Default behavior on Telegram/WhatsApp/Signal/iMessage/Microsoft Teams/Discord/Google Chat/Slack:
 - **DM pairing** (`dmPolicy="pairing"` / `channels.discord.dm.policy="pairing"` / `channels.slack.dm.policy="pairing"`): unknown senders receive a short pairing code and the bot does not process their message.
@@ -116,14 +116,14 @@ Run `moltbot doctor` to surface risky/misconfigured DM policies.
 
 ## Highlights
 
-- **[Local-first Gateway](https://docs.molt.bot/gateway)** — single control plane for sessions, channels, tools, and events.
-- **[Multi-channel inbox](https://docs.molt.bot/channels)** — WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, BlueBubbles, Microsoft Teams, Matrix, Zalo, Zalo Personal, WebChat, macOS, iOS/Android.
-- **[Multi-agent routing](https://docs.molt.bot/gateway/configuration)** — route inbound channels/accounts/peers to isolated agents (workspaces + per-agent sessions).
-- **[Voice Wake](https://docs.molt.bot/nodes/voicewake) + [Talk Mode](https://docs.molt.bot/nodes/talk)** — always-on speech for macOS/iOS/Android with ElevenLabs.
-- **[Live Canvas](https://docs.molt.bot/platforms/mac/canvas)** — agent-driven visual workspace with [A2UI](https://docs.molt.bot/platforms/mac/canvas#canvas-a2ui).
-- **[First-class tools](https://docs.molt.bot/tools)** — browser, canvas, nodes, cron, sessions, and Discord/Slack actions.
-- **[Companion apps](https://docs.molt.bot/platforms/macos)** — macOS menu bar app + iOS/Android [nodes](https://docs.molt.bot/nodes).
-- **[Onboarding](https://docs.molt.bot/start/wizard) + [skills](https://docs.molt.bot/tools/skills)** — wizard-driven setup with bundled/managed/workspace skills.
+- **[Local-first Gateway](https://docs.360bot.com/gateway)** — single control plane for sessions, channels, tools, and events.
+- **[Multi-channel inbox](https://docs.360bot.com/channels)** — WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, BlueBubbles, Microsoft Teams, Matrix, Zalo, Zalo Personal, WebChat, macOS, iOS/Android.
+- **[Multi-agent routing](https://docs.360bot.com/gateway/configuration)** — route inbound channels/accounts/peers to isolated agents (workspaces + per-agent sessions).
+- **[Voice Wake](https://docs.360bot.com/nodes/voicewake) + [Talk Mode](https://docs.360bot.com/nodes/talk)** — always-on speech for macOS/iOS/Android with ElevenLabs.
+- **[Live Canvas](https://docs.360bot.com/platforms/mac/canvas)** — agent-driven visual workspace with [A2UI](https://docs.360bot.com/platforms/mac/canvas#canvas-a2ui).
+- **[First-class tools](https://docs.360bot.com/tools)** — browser, canvas, nodes, cron, sessions, and Discord/Slack actions.
+- **[Companion apps](https://docs.360bot.com/platforms/macos)** — macOS menu bar app + iOS/Android [nodes](https://docs.360bot.com/nodes).
+- **[Onboarding](https://docs.360bot.com/start/wizard) + [skills](https://docs.360bot.com/tools/skills)** — wizard-driven setup with bundled/managed/workspace skills.
 
 ## Star History
 
@@ -132,40 +132,40 @@ Run `moltbot doctor` to surface risky/misconfigured DM policies.
 ## Everything we built so far
 
 ### Core platform
-- [Gateway WS control plane](https://docs.molt.bot/gateway) with sessions, presence, config, cron, webhooks, [Control UI](https://docs.molt.bot/web), and [Canvas host](https://docs.molt.bot/platforms/mac/canvas#canvas-a2ui).
-- [CLI surface](https://docs.molt.bot/tools/agent-send): gateway, agent, send, [wizard](https://docs.molt.bot/start/wizard), and [doctor](https://docs.molt.bot/gateway/doctor).
-- [Pi agent runtime](https://docs.molt.bot/concepts/agent) in RPC mode with tool streaming and block streaming.
-- [Session model](https://docs.molt.bot/concepts/session): `main` for direct chats, group isolation, activation modes, queue modes, reply-back. Group rules: [Groups](https://docs.molt.bot/concepts/groups).
-- [Media pipeline](https://docs.molt.bot/nodes/images): images/audio/video, transcription hooks, size caps, temp file lifecycle. Audio details: [Audio](https://docs.molt.bot/nodes/audio).
+- [Gateway WS control plane](https://docs.360bot.com/gateway) with sessions, presence, config, cron, webhooks, [Control UI](https://docs.360bot.com/web), and [Canvas host](https://docs.360bot.com/platforms/mac/canvas#canvas-a2ui).
+- [CLI surface](https://docs.360bot.com/tools/agent-send): gateway, agent, send, [wizard](https://docs.360bot.com/start/wizard), and [doctor](https://docs.360bot.com/gateway/doctor).
+- [Pi agent runtime](https://docs.360bot.com/concepts/agent) in RPC mode with tool streaming and block streaming.
+- [Session model](https://docs.360bot.com/concepts/session): `main` for direct chats, group isolation, activation modes, queue modes, reply-back. Group rules: [Groups](https://docs.360bot.com/concepts/groups).
+- [Media pipeline](https://docs.360bot.com/nodes/images): images/audio/video, transcription hooks, size caps, temp file lifecycle. Audio details: [Audio](https://docs.360bot.com/nodes/audio).
 
 ### Channels
-- [Channels](https://docs.molt.bot/channels): [WhatsApp](https://docs.molt.bot/channels/whatsapp) (Baileys), [Telegram](https://docs.molt.bot/channels/telegram) (grammY), [Slack](https://docs.molt.bot/channels/slack) (Bolt), [Discord](https://docs.molt.bot/channels/discord) (discord.js), [Google Chat](https://docs.molt.bot/channels/googlechat) (Chat API), [Signal](https://docs.molt.bot/channels/signal) (signal-cli), [iMessage](https://docs.molt.bot/channels/imessage) (imsg), [BlueBubbles](https://docs.molt.bot/channels/bluebubbles) (extension), [Microsoft Teams](https://docs.molt.bot/channels/msteams) (extension), [Matrix](https://docs.molt.bot/channels/matrix) (extension), [Zalo](https://docs.molt.bot/channels/zalo) (extension), [Zalo Personal](https://docs.molt.bot/channels/zalouser) (extension), [WebChat](https://docs.molt.bot/web/webchat).
-- [Group routing](https://docs.molt.bot/concepts/group-messages): mention gating, reply tags, per-channel chunking and routing. Channel rules: [Channels](https://docs.molt.bot/channels).
+- [Channels](https://docs.360bot.com/channels): [WhatsApp](https://docs.360bot.com/channels/whatsapp) (Baileys), [Telegram](https://docs.360bot.com/channels/telegram) (grammY), [Slack](https://docs.360bot.com/channels/slack) (Bolt), [Discord](https://docs.360bot.com/channels/discord) (discord.js), [Google Chat](https://docs.360bot.com/channels/googlechat) (Chat API), [Signal](https://docs.360bot.com/channels/signal) (signal-cli), [iMessage](https://docs.360bot.com/channels/imessage) (imsg), [BlueBubbles](https://docs.360bot.com/channels/bluebubbles) (extension), [Microsoft Teams](https://docs.360bot.com/channels/msteams) (extension), [Matrix](https://docs.360bot.com/channels/matrix) (extension), [Zalo](https://docs.360bot.com/channels/zalo) (extension), [Zalo Personal](https://docs.360bot.com/channels/zalouser) (extension), [WebChat](https://docs.360bot.com/web/webchat).
+- [Group routing](https://docs.360bot.com/concepts/group-messages): mention gating, reply tags, per-channel chunking and routing. Channel rules: [Channels](https://docs.360bot.com/channels).
 
 ### Apps + nodes
-- [macOS app](https://docs.molt.bot/platforms/macos): menu bar control plane, [Voice Wake](https://docs.molt.bot/nodes/voicewake)/PTT, [Talk Mode](https://docs.molt.bot/nodes/talk) overlay, [WebChat](https://docs.molt.bot/web/webchat), debug tools, [remote gateway](https://docs.molt.bot/gateway/remote) control.
-- [iOS node](https://docs.molt.bot/platforms/ios): [Canvas](https://docs.molt.bot/platforms/mac/canvas), [Voice Wake](https://docs.molt.bot/nodes/voicewake), [Talk Mode](https://docs.molt.bot/nodes/talk), camera, screen recording, Bonjour pairing.
-- [Android node](https://docs.molt.bot/platforms/android): [Canvas](https://docs.molt.bot/platforms/mac/canvas), [Talk Mode](https://docs.molt.bot/nodes/talk), camera, screen recording, optional SMS.
-- [macOS node mode](https://docs.molt.bot/nodes): system.run/notify + canvas/camera exposure.
+- [macOS app](https://docs.360bot.com/platforms/macos): menu bar control plane, [Voice Wake](https://docs.360bot.com/nodes/voicewake)/PTT, [Talk Mode](https://docs.360bot.com/nodes/talk) overlay, [WebChat](https://docs.360bot.com/web/webchat), debug tools, [remote gateway](https://docs.360bot.com/gateway/remote) control.
+- [iOS node](https://docs.360bot.com/platforms/ios): [Canvas](https://docs.360bot.com/platforms/mac/canvas), [Voice Wake](https://docs.360bot.com/nodes/voicewake), [Talk Mode](https://docs.360bot.com/nodes/talk), camera, screen recording, Bonjour pairing.
+- [Android node](https://docs.360bot.com/platforms/android): [Canvas](https://docs.360bot.com/platforms/mac/canvas), [Talk Mode](https://docs.360bot.com/nodes/talk), camera, screen recording, optional SMS.
+- [macOS node mode](https://docs.360bot.com/nodes): system.run/notify + canvas/camera exposure.
 
 ### Tools + automation
-- [Browser control](https://docs.molt.bot/tools/browser): dedicated moltbot Chrome/Chromium, snapshots, actions, uploads, profiles.
-- [Canvas](https://docs.molt.bot/platforms/mac/canvas): [A2UI](https://docs.molt.bot/platforms/mac/canvas#canvas-a2ui) push/reset, eval, snapshot.
-- [Nodes](https://docs.molt.bot/nodes): camera snap/clip, screen record, [location.get](https://docs.molt.bot/nodes/location-command), notifications.
-- [Cron + wakeups](https://docs.molt.bot/automation/cron-jobs); [webhooks](https://docs.molt.bot/automation/webhook); [Gmail Pub/Sub](https://docs.molt.bot/automation/gmail-pubsub).
-- [Skills platform](https://docs.molt.bot/tools/skills): bundled, managed, and workspace skills with install gating + UI.
+- [Browser control](https://docs.360bot.com/tools/browser): dedicated moltbot Chrome/Chromium, snapshots, actions, uploads, profiles.
+- [Canvas](https://docs.360bot.com/platforms/mac/canvas): [A2UI](https://docs.360bot.com/platforms/mac/canvas#canvas-a2ui) push/reset, eval, snapshot.
+- [Nodes](https://docs.360bot.com/nodes): camera snap/clip, screen record, [location.get](https://docs.360bot.com/nodes/location-command), notifications.
+- [Cron + wakeups](https://docs.360bot.com/automation/cron-jobs); [webhooks](https://docs.360bot.com/automation/webhook); [Gmail Pub/Sub](https://docs.360bot.com/automation/gmail-pubsub).
+- [Skills platform](https://docs.360bot.com/tools/skills): bundled, managed, and workspace skills with install gating + UI.
 
 ### Runtime + safety
-- [Channel routing](https://docs.molt.bot/concepts/channel-routing), [retry policy](https://docs.molt.bot/concepts/retry), and [streaming/chunking](https://docs.molt.bot/concepts/streaming).
-- [Presence](https://docs.molt.bot/concepts/presence), [typing indicators](https://docs.molt.bot/concepts/typing-indicators), and [usage tracking](https://docs.molt.bot/concepts/usage-tracking).
-- [Models](https://docs.molt.bot/concepts/models), [model failover](https://docs.molt.bot/concepts/model-failover), and [session pruning](https://docs.molt.bot/concepts/session-pruning).
-- [Security](https://docs.molt.bot/gateway/security) and [troubleshooting](https://docs.molt.bot/channels/troubleshooting).
+- [Channel routing](https://docs.360bot.com/concepts/channel-routing), [retry policy](https://docs.360bot.com/concepts/retry), and [streaming/chunking](https://docs.360bot.com/concepts/streaming).
+- [Presence](https://docs.360bot.com/concepts/presence), [typing indicators](https://docs.360bot.com/concepts/typing-indicators), and [usage tracking](https://docs.360bot.com/concepts/usage-tracking).
+- [Models](https://docs.360bot.com/concepts/models), [model failover](https://docs.360bot.com/concepts/model-failover), and [session pruning](https://docs.360bot.com/concepts/session-pruning).
+- [Security](https://docs.360bot.com/gateway/security) and [troubleshooting](https://docs.360bot.com/channels/troubleshooting).
 
 ### Ops + packaging
-- [Control UI](https://docs.molt.bot/web) + [WebChat](https://docs.molt.bot/web/webchat) served directly from the Gateway.
-- [Tailscale Serve/Funnel](https://docs.molt.bot/gateway/tailscale) or [SSH tunnels](https://docs.molt.bot/gateway/remote) with token/password auth.
-- [Nix mode](https://docs.molt.bot/install/nix) for declarative config; [Docker](https://docs.molt.bot/install/docker)-based installs.
-- [Doctor](https://docs.molt.bot/gateway/doctor) migrations, [logging](https://docs.molt.bot/logging).
+- [Control UI](https://docs.360bot.com/web) + [WebChat](https://docs.360bot.com/web/webchat) served directly from the Gateway.
+- [Tailscale Serve/Funnel](https://docs.360bot.com/gateway/tailscale) or [SSH tunnels](https://docs.360bot.com/gateway/remote) with token/password auth.
+- [Nix mode](https://docs.360bot.com/install/nix) for declarative config; [Docker](https://docs.360bot.com/install/docker)-based installs.
+- [Doctor](https://docs.360bot.com/gateway/doctor) migrations, [logging](https://docs.360bot.com/logging).
 
 ## How it works (short)
 
@@ -188,12 +188,12 @@ WhatsApp / Telegram / Slack / Discord / Google Chat / Signal / iMessage / BlueBu
 
 ## Key subsystems
 
-- **[Gateway WebSocket network](https://docs.molt.bot/concepts/architecture)** — single WS control plane for clients, tools, and events (plus ops: [Gateway runbook](https://docs.molt.bot/gateway)).
-- **[Tailscale exposure](https://docs.molt.bot/gateway/tailscale)** — Serve/Funnel for the Gateway dashboard + WS (remote access: [Remote](https://docs.molt.bot/gateway/remote)).
-- **[Browser control](https://docs.molt.bot/tools/browser)** — moltbot‑managed Chrome/Chromium with CDP control.
-- **[Canvas + A2UI](https://docs.molt.bot/platforms/mac/canvas)** — agent‑driven visual workspace (A2UI host: [Canvas/A2UI](https://docs.molt.bot/platforms/mac/canvas#canvas-a2ui)).
-- **[Voice Wake](https://docs.molt.bot/nodes/voicewake) + [Talk Mode](https://docs.molt.bot/nodes/talk)** — always‑on speech and continuous conversation.
-- **[Nodes](https://docs.molt.bot/nodes)** — Canvas, camera snap/clip, screen record, `location.get`, notifications, plus macOS‑only `system.run`/`system.notify`.
+- **[Gateway WebSocket network](https://docs.360bot.com/concepts/architecture)** — single WS control plane for clients, tools, and events (plus ops: [Gateway runbook](https://docs.360bot.com/gateway)).
+- **[Tailscale exposure](https://docs.360bot.com/gateway/tailscale)** — Serve/Funnel for the Gateway dashboard + WS (remote access: [Remote](https://docs.360bot.com/gateway/remote)).
+- **[Browser control](https://docs.360bot.com/tools/browser)** — moltbot‑managed Chrome/Chromium with CDP control.
+- **[Canvas + A2UI](https://docs.360bot.com/platforms/mac/canvas)** — agent‑driven visual workspace (A2UI host: [Canvas/A2UI](https://docs.360bot.com/platforms/mac/canvas#canvas-a2ui)).
+- **[Voice Wake](https://docs.360bot.com/nodes/voicewake) + [Talk Mode](https://docs.360bot.com/nodes/talk)** — always‑on speech and continuous conversation.
+- **[Nodes](https://docs.360bot.com/nodes)** — Canvas, camera snap/clip, screen record, `location.get`, notifications, plus macOS‑only `system.run`/`system.notify`.
 
 ## Tailscale access (Gateway dashboard)
 
@@ -209,7 +209,7 @@ Notes:
 - Funnel refuses to start unless `gateway.auth.mode: "password"` is set.
 - Optional: `gateway.tailscale.resetOnExit` to undo Serve/Funnel on shutdown.
 
-Details: [Tailscale guide](https://docs.molt.bot/gateway/tailscale) · [Web surfaces](https://docs.molt.bot/web)
+Details: [Tailscale guide](https://docs.360bot.com/gateway/tailscale) · [Web surfaces](https://docs.360bot.com/web)
 
 ## Remote Gateway (Linux is great)
 
@@ -219,7 +219,7 @@ It’s perfectly fine to run the Gateway on a small Linux instance. Clients (mac
 - **Device nodes** run device‑local actions (`system.run`, camera, screen recording, notifications) via `node.invoke`.
 In short: exec runs where the Gateway lives; device actions run where the device lives.
 
-Details: [Remote access](https://docs.molt.bot/gateway/remote) · [Nodes](https://docs.molt.bot/nodes) · [Security](https://docs.molt.bot/gateway/security)
+Details: [Remote access](https://docs.360bot.com/gateway/remote) · [Nodes](https://docs.360bot.com/nodes) · [Security](https://docs.360bot.com/gateway/security)
 
 ## macOS permissions via the Gateway protocol
 
@@ -234,7 +234,7 @@ Elevated bash (host permissions) is separate from macOS TCC:
 - Use `/elevated on|off` to toggle per‑session elevated access when enabled + allowlisted.
 - Gateway persists the per‑session toggle via `sessions.patch` (WS method) alongside `thinkingLevel`, `verboseLevel`, `model`, `sendPolicy`, and `groupActivation`.
 
-Details: [Nodes](https://docs.molt.bot/nodes) · [macOS app](https://docs.molt.bot/platforms/macos) · [Gateway protocol](https://docs.molt.bot/concepts/architecture)
+Details: [Nodes](https://docs.360bot.com/nodes) · [macOS app](https://docs.360bot.com/platforms/macos) · [Gateway protocol](https://docs.360bot.com/concepts/architecture)
 
 ## Agent to Agent (sessions_* tools)
 
@@ -243,7 +243,7 @@ Details: [Nodes](https://docs.molt.bot/nodes) · [macOS app](https://docs.molt.b
 - `sessions_history` — fetch transcript logs for a session.
 - `sessions_send` — message another session; optional reply‑back ping‑pong + announce step (`REPLY_SKIP`, `ANNOUNCE_SKIP`).
 
-Details: [Session tools](https://docs.molt.bot/concepts/session-tool)
+Details: [Session tools](https://docs.360bot.com/concepts/session-tool)
 
 ## Skills registry (ClawdHub)
 
@@ -285,13 +285,13 @@ Note: signed builds required for macOS permissions to stick across rebuilds (see
 - Voice trigger forwarding + Canvas surface.
 - Controlled via `moltbot nodes …`.
 
-Runbook: [iOS connect](https://docs.molt.bot/platforms/ios).
+Runbook: [iOS connect](https://docs.360bot.com/platforms/ios).
 
 ### Android node (optional)
 
 - Pairs via the same Bridge + pairing flow as iOS.
 - Exposes Canvas, Camera, and Screen capture commands.
-- Runbook: [Android connect](https://docs.molt.bot/platforms/android).
+- Runbook: [Android connect](https://docs.360bot.com/platforms/android).
 
 ## Agent workspace + skills
 
@@ -311,7 +311,7 @@ Minimal `~/.clawdbot/moltbot.json` (model + defaults):
 }
 ```
 
-[Full configuration reference (all keys + examples).](https://docs.molt.bot/gateway/configuration)
+[Full configuration reference (all keys + examples).](https://docs.360bot.com/gateway/configuration)
 
 ## Security model (important)
 
@@ -319,15 +319,15 @@ Minimal `~/.clawdbot/moltbot.json` (model + defaults):
 - **Group/channel safety:** set `agents.defaults.sandbox.mode: "non-main"` to run **non‑main sessions** (groups/channels) inside per‑session Docker sandboxes; bash then runs in Docker for those sessions.
 - **Sandbox defaults:** allowlist `bash`, `process`, `read`, `write`, `edit`, `sessions_list`, `sessions_history`, `sessions_send`, `sessions_spawn`; denylist `browser`, `canvas`, `nodes`, `cron`, `discord`, `gateway`.
 
-Details: [Security guide](https://docs.molt.bot/gateway/security) · [Docker + sandboxing](https://docs.molt.bot/install/docker) · [Sandbox config](https://docs.molt.bot/gateway/configuration)
+Details: [Security guide](https://docs.360bot.com/gateway/security) · [Docker + sandboxing](https://docs.360bot.com/install/docker) · [Sandbox config](https://docs.360bot.com/gateway/configuration)
 
-### [WhatsApp](https://docs.molt.bot/channels/whatsapp)
+### [WhatsApp](https://docs.360bot.com/channels/whatsapp)
 
 - Link the device: `pnpm moltbot channels login` (stores creds in `~/.clawdbot/credentials`).
 - Allowlist who can talk to the assistant via `channels.whatsapp.allowFrom`.
 - If `channels.whatsapp.groups` is set, it becomes a group allowlist; include `"*"` to allow all.
 
-### [Telegram](https://docs.molt.bot/channels/telegram)
+### [Telegram](https://docs.360bot.com/channels/telegram)
 
 - Set `TELEGRAM_BOT_TOKEN` or `channels.telegram.botToken` (env wins).
 - Optional: set `channels.telegram.groups` (with `channels.telegram.groups."*".requireMention`); when set, it is a group allowlist (include `"*"` to allow all). Also `channels.telegram.allowFrom` or `channels.telegram.webhookUrl` as needed.
@@ -342,11 +342,11 @@ Details: [Security guide](https://docs.molt.bot/gateway/security) · [Docker + s
 }
 ```
 
-### [Slack](https://docs.molt.bot/channels/slack)
+### [Slack](https://docs.360bot.com/channels/slack)
 
 - Set `SLACK_BOT_TOKEN` + `SLACK_APP_TOKEN` (or `channels.slack.botToken` + `channels.slack.appToken`).
 
-### [Discord](https://docs.molt.bot/channels/discord)
+### [Discord](https://docs.360bot.com/channels/discord)
 
 - Set `DISCORD_BOT_TOKEN` or `channels.discord.token` (env wins).
 - Optional: set `commands.native`, `commands.text`, or `commands.useAccessGroups`, plus `channels.discord.dm.allowFrom`, `channels.discord.guilds`, or `channels.discord.mediaMaxMb` as needed.
@@ -361,21 +361,21 @@ Details: [Security guide](https://docs.molt.bot/gateway/security) · [Docker + s
 }
 ```
 
-### [Signal](https://docs.molt.bot/channels/signal)
+### [Signal](https://docs.360bot.com/channels/signal)
 
 - Requires `signal-cli` and a `channels.signal` config section.
 
-### [iMessage](https://docs.molt.bot/channels/imessage)
+### [iMessage](https://docs.360bot.com/channels/imessage)
 
 - macOS only; Messages must be signed in.
 - If `channels.imessage.groups` is set, it becomes a group allowlist; include `"*"` to allow all.
 
-### [Microsoft Teams](https://docs.molt.bot/channels/msteams)
+### [Microsoft Teams](https://docs.360bot.com/channels/msteams)
 
 - Configure a Teams app + Bot Framework, then add a `msteams` config section.
 - Allowlist who can talk via `msteams.allowFrom`; group access via `msteams.groupAllowFrom` or `msteams.groupPolicy: "open"`.
 
-### [WebChat](https://docs.molt.bot/web/webchat)
+### [WebChat](https://docs.360bot.com/web/webchat)
 
 - Uses the Gateway WebSocket; no separate WebChat port/config.
 
@@ -393,69 +393,69 @@ Browser control (optional):
 ## Docs
 
 Use these when you’re past the onboarding flow and want the deeper reference.
-- [Start with the docs index for navigation and “what’s where.”](https://docs.molt.bot)
-- [Read the architecture overview for the gateway + protocol model.](https://docs.molt.bot/concepts/architecture)
-- [Use the full configuration reference when you need every key and example.](https://docs.molt.bot/gateway/configuration)
-- [Run the Gateway by the book with the operational runbook.](https://docs.molt.bot/gateway)
-- [Learn how the Control UI/Web surfaces work and how to expose them safely.](https://docs.molt.bot/web)
-- [Understand remote access over SSH tunnels or tailnets.](https://docs.molt.bot/gateway/remote)
-- [Follow the onboarding wizard flow for a guided setup.](https://docs.molt.bot/start/wizard)
-- [Wire external triggers via the webhook surface.](https://docs.molt.bot/automation/webhook)
-- [Set up Gmail Pub/Sub triggers.](https://docs.molt.bot/automation/gmail-pubsub)
-- [Learn the macOS menu bar companion details.](https://docs.molt.bot/platforms/mac/menu-bar)
-- [Platform guides: Windows (WSL2)](https://docs.molt.bot/platforms/windows), [Linux](https://docs.molt.bot/platforms/linux), [macOS](https://docs.molt.bot/platforms/macos), [iOS](https://docs.molt.bot/platforms/ios), [Android](https://docs.molt.bot/platforms/android)
-- [Debug common failures with the troubleshooting guide.](https://docs.molt.bot/channels/troubleshooting)
-- [Review security guidance before exposing anything.](https://docs.molt.bot/gateway/security)
+- [Start with the docs index for navigation and “what’s where.”](https://docs.360bot.com)
+- [Read the architecture overview for the gateway + protocol model.](https://docs.360bot.com/concepts/architecture)
+- [Use the full configuration reference when you need every key and example.](https://docs.360bot.com/gateway/configuration)
+- [Run the Gateway by the book with the operational runbook.](https://docs.360bot.com/gateway)
+- [Learn how the Control UI/Web surfaces work and how to expose them safely.](https://docs.360bot.com/web)
+- [Understand remote access over SSH tunnels or tailnets.](https://docs.360bot.com/gateway/remote)
+- [Follow the onboarding wizard flow for a guided setup.](https://docs.360bot.com/start/wizard)
+- [Wire external triggers via the webhook surface.](https://docs.360bot.com/automation/webhook)
+- [Set up Gmail Pub/Sub triggers.](https://docs.360bot.com/automation/gmail-pubsub)
+- [Learn the macOS menu bar companion details.](https://docs.360bot.com/platforms/mac/menu-bar)
+- [Platform guides: Windows (WSL2)](https://docs.360bot.com/platforms/windows), [Linux](https://docs.360bot.com/platforms/linux), [macOS](https://docs.360bot.com/platforms/macos), [iOS](https://docs.360bot.com/platforms/ios), [Android](https://docs.360bot.com/platforms/android)
+- [Debug common failures with the troubleshooting guide.](https://docs.360bot.com/channels/troubleshooting)
+- [Review security guidance before exposing anything.](https://docs.360bot.com/gateway/security)
 
 ## Advanced docs (discovery + control)
 
-- [Discovery + transports](https://docs.molt.bot/gateway/discovery)
-- [Bonjour/mDNS](https://docs.molt.bot/gateway/bonjour)
-- [Gateway pairing](https://docs.molt.bot/gateway/pairing)
-- [Remote gateway README](https://docs.molt.bot/gateway/remote-gateway-readme)
-- [Control UI](https://docs.molt.bot/web/control-ui)
-- [Dashboard](https://docs.molt.bot/web/dashboard)
+- [Discovery + transports](https://docs.360bot.com/gateway/discovery)
+- [Bonjour/mDNS](https://docs.360bot.com/gateway/bonjour)
+- [Gateway pairing](https://docs.360bot.com/gateway/pairing)
+- [Remote gateway README](https://docs.360bot.com/gateway/remote-gateway-readme)
+- [Control UI](https://docs.360bot.com/web/control-ui)
+- [Dashboard](https://docs.360bot.com/web/dashboard)
 
 ## Operations & troubleshooting
 
-- [Health checks](https://docs.molt.bot/gateway/health)
-- [Gateway lock](https://docs.molt.bot/gateway/gateway-lock)
-- [Background process](https://docs.molt.bot/gateway/background-process)
-- [Browser troubleshooting (Linux)](https://docs.molt.bot/tools/browser-linux-troubleshooting)
-- [Logging](https://docs.molt.bot/logging)
+- [Health checks](https://docs.360bot.com/gateway/health)
+- [Gateway lock](https://docs.360bot.com/gateway/gateway-lock)
+- [Background process](https://docs.360bot.com/gateway/background-process)
+- [Browser troubleshooting (Linux)](https://docs.360bot.com/tools/browser-linux-troubleshooting)
+- [Logging](https://docs.360bot.com/logging)
 
 ## Deep dives
 
-- [Agent loop](https://docs.molt.bot/concepts/agent-loop)
-- [Presence](https://docs.molt.bot/concepts/presence)
-- [TypeBox schemas](https://docs.molt.bot/concepts/typebox)
-- [RPC adapters](https://docs.molt.bot/reference/rpc)
-- [Queue](https://docs.molt.bot/concepts/queue)
+- [Agent loop](https://docs.360bot.com/concepts/agent-loop)
+- [Presence](https://docs.360bot.com/concepts/presence)
+- [TypeBox schemas](https://docs.360bot.com/concepts/typebox)
+- [RPC adapters](https://docs.360bot.com/reference/rpc)
+- [Queue](https://docs.360bot.com/concepts/queue)
 
 ## Workspace & skills
 
-- [Skills config](https://docs.molt.bot/tools/skills-config)
-- [Default AGENTS](https://docs.molt.bot/reference/AGENTS.default)
-- [Templates: AGENTS](https://docs.molt.bot/reference/templates/AGENTS)
-- [Templates: BOOTSTRAP](https://docs.molt.bot/reference/templates/BOOTSTRAP)
-- [Templates: IDENTITY](https://docs.molt.bot/reference/templates/IDENTITY)
-- [Templates: SOUL](https://docs.molt.bot/reference/templates/SOUL)
-- [Templates: TOOLS](https://docs.molt.bot/reference/templates/TOOLS)
-- [Templates: USER](https://docs.molt.bot/reference/templates/USER)
+- [Skills config](https://docs.360bot.com/tools/skills-config)
+- [Default AGENTS](https://docs.360bot.com/reference/AGENTS.default)
+- [Templates: AGENTS](https://docs.360bot.com/reference/templates/AGENTS)
+- [Templates: BOOTSTRAP](https://docs.360bot.com/reference/templates/BOOTSTRAP)
+- [Templates: IDENTITY](https://docs.360bot.com/reference/templates/IDENTITY)
+- [Templates: SOUL](https://docs.360bot.com/reference/templates/SOUL)
+- [Templates: TOOLS](https://docs.360bot.com/reference/templates/TOOLS)
+- [Templates: USER](https://docs.360bot.com/reference/templates/USER)
 
 ## Platform internals
 
-- [macOS dev setup](https://docs.molt.bot/platforms/mac/dev-setup)
-- [macOS menu bar](https://docs.molt.bot/platforms/mac/menu-bar)
-- [macOS voice wake](https://docs.molt.bot/platforms/mac/voicewake)
-- [iOS node](https://docs.molt.bot/platforms/ios)
-- [Android node](https://docs.molt.bot/platforms/android)
-- [Windows (WSL2)](https://docs.molt.bot/platforms/windows)
-- [Linux app](https://docs.molt.bot/platforms/linux)
+- [macOS dev setup](https://docs.360bot.com/platforms/mac/dev-setup)
+- [macOS menu bar](https://docs.360bot.com/platforms/mac/menu-bar)
+- [macOS voice wake](https://docs.360bot.com/platforms/mac/voicewake)
+- [iOS node](https://docs.360bot.com/platforms/ios)
+- [Android node](https://docs.360bot.com/platforms/android)
+- [Windows (WSL2)](https://docs.360bot.com/platforms/windows)
+- [Linux app](https://docs.360bot.com/platforms/linux)
 
 ## Email hooks (Gmail)
 
-- [docs.molt.bot/gmail-pubsub](https://docs.molt.bot/automation/gmail-pubsub)
+- [docs.360bot.com/gmail-pubsub](https://docs.360bot.com/automation/gmail-pubsub)
 
 ## Molty
 

@@ -44,7 +44,7 @@ export async function onboardCommand(opts: OnboardOptions, runtime: RuntimeEnv =
     runtime.error(
       [
         "Non-interactive onboarding requires explicit risk acknowledgement.",
-        "Read: https://docs.molt.bot/security",
+        "Read: https://docs.360bot.com/security",
         `Re-run with: ${formatCliCommand("moltbot onboard --non-interactive --accept-risk ...")}`,
       ].join("\n"),
     );
@@ -65,7 +65,7 @@ export async function onboardCommand(opts: OnboardOptions, runtime: RuntimeEnv =
       [
         "Windows detected.",
         "WSL2 is strongly recommended; native Windows is untested and more problematic.",
-        "Guide: https://docs.molt.bot/windows",
+        "Guide: https://docs.360bot.com/windows",
       ].join("\n"),
     );
   }

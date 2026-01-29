@@ -80,7 +80,7 @@ Multi-account config (advanced):
 
 ## Full documentation
 
-See https://docs.molt.bot/channels/twitch for:
+See https://docs.360bot.com/channels/twitch for:
 
 - Token refresh setup
 - Access control patterns

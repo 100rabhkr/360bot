@@ -27,11 +27,11 @@ There are still references to `moltbot` in the codebase that should be updated t
 
 **Search & Replace:**
 -   **Strings**: Search for `Moltbot` and `Clawdbot` (legacy name) in `src/`.
--   **URLs**: Search for `docs.molt.bot` and `molt.bot`. You should replace these with your own documentation URLs.
+-   **URLs**: Search for `docs.360bot.com` and `360bot.com`. You should replace these with your own documentation URLs.
 
 **Key Files to Check:**
 -   `src/cli/banner.ts`: ASCII art and CLI header.
--   `src/cli/*.ts`: Help text often links to `docs.molt.bot`.
+-   `src/cli/*.ts`: Help text often links to `docs.360bot.com`.
 -   `src/config/types.ts`: TypeScript interfaces might still be named `MoltbotConfig`.
 
 ### B. Environment Variables
