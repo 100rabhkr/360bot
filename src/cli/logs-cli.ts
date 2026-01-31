@@ -180,7 +180,7 @@ export function registerLogsCli(program: Command) {
     .option("--no-color", "Disable ANSI colors")
     .addHelpText(
       "after",
-      () => `\n${theme.muted("Docs:")} ${formatDocsLink("/cli/logs", "docs.molt.bot/cli/logs")}\n`,
+      () => `\n${theme.muted("Docs:")} ${formatDocsLink("/cli/logs", "docs.360bot.com/cli/logs")}\n`,
     );
 
   addGatewayClientOptions(logs);

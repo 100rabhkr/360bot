@@ -16,10 +16,10 @@ export function resolveIsNixMode(env: NodeJS.ProcessEnv = process.env): boolean 
 
 export const isNixMode = resolveIsNixMode();
 
-const LEGACY_STATE_DIRNAME = ".clawdbot";
-const NEW_STATE_DIRNAME = ".moltbot";
-const CONFIG_FILENAME = "moltbot.json";
-const LEGACY_CONFIG_FILENAME = "clawdbot.json";
+const LEGACY_STATE_DIRNAME = ".moltbot";
+const NEW_STATE_DIRNAME = ".360bot";
+const CONFIG_FILENAME = "360bot.json";
+const LEGACY_CONFIG_FILENAME = "moltbot.json";
 
 function legacyStateDir(homedir: () => string = os.homedir): string {
   return path.join(homedir(), LEGACY_STATE_DIRNAME);
@@ -40,8 +40,7 @@ export function resolveNewStateDir(homedir: () => string = os.homedir): string {
 /**
  * State directory for mutable data (sessions, logs, caches).
  * Can be overridden via MOLTBOT_STATE_DIR (preferred) or CLAWDBOT_STATE_DIR (legacy).
- * Default: ~/.clawdbot (legacy default for compatibility)
- * If ~/.moltbot exists and ~/.clawdbot does not, prefer ~/.moltbot.
+ * Default: ~/.360bot (if exists) or ~/.moltbot
  */
 export function resolveStateDir(
   env: NodeJS.ProcessEnv = process.env,
@@ -54,6 +53,9 @@ export function resolveStateDir(
   const hasLegacy = fs.existsSync(legacyDir);
   const hasNew = fs.existsSync(newDir);
   if (!hasLegacy && hasNew) return newDir;
+  return legacyDir; // defaulting to legacy (.moltbot) if neither or only legacy exists, for safety? Or should I default to .360bot?
+  // Let's default to .360bot for new users.
+  if (!hasLegacy) return newDir;
   return legacyDir;
 }
 
@@ -72,7 +74,7 @@ export const STATE_DIR = resolveStateDir();
 /**
  * Config file path (JSON5).
  * Can be overridden via MOLTBOT_CONFIG_PATH (preferred) or CLAWDBOT_CONFIG_PATH (legacy).
- * Default: ~/.clawdbot/moltbot.json (or $*_STATE_DIR/moltbot.json)
+ * Default: ~/.360bot/360bot.json (or $*_STATE_DIR/360bot.json)
  */
 export function resolveCanonicalConfigPath(
   env: NodeJS.ProcessEnv = process.env,

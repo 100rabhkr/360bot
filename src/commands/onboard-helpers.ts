@@ -177,8 +177,8 @@ export function formatControlUiSshHint(params: {
     localUrl,
     authedUrl,
     "Docs:",
-    "https://docs.molt.bot/gateway/remote",
-    "https://docs.molt.bot/web/control-ui",
+    "https://docs.360bot.com/gateway/remote",
+    "https://docs.360bot.com/web/control-ui",
   ]
     .filter(Boolean)
     .join("\n");

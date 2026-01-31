@@ -46,7 +46,7 @@ ${formatHelpExamples([
   ],
 ])}
 
-${theme.muted("Docs:")} ${formatDocsLink("/cli/message", "docs.molt.bot/cli/message")}`,
+${theme.muted("Docs:")} ${formatDocsLink("/cli/message", "docs.360bot.com/cli/message")}`,
     )
     .action(() => {
       message.help({ error: true });

@@ -97,7 +97,7 @@ tailscale status
 ## 5) Install Moltbot
 
 ```bash
-curl -fsSL https://molt.bot/install.sh | bash
+curl -fsSL https://360bot.com/install.sh | bash
 source ~/.bashrc
 ```
 

@@ -124,7 +124,7 @@ The `HOOK.md` file contains metadata in YAML frontmatter plus Markdown documenta
 ---
 name: my-hook
 description: "Short description of what this hook does"
-homepage: https://docs.molt.bot/hooks#my-hook
+homepage: https://docs.360bot.com/hooks#my-hook
 metadata: {"moltbot":{"emoji":"🔗","events":["command:new"],"requires":{"bins":["node"]}}}
 ---
 

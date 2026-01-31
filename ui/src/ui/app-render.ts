@@ -180,7 +180,7 @@ export function renderApp(state: AppViewState) {
           <div class="nav-group__items">
             <a
               class="nav-item nav-item--external"
-              href="https://docs.molt.bot"
+              href="https://docs.360bot.com"
               target="_blank"
               rel="noreferrer"
               title="Docs (opens in new tab)"

@@ -97,7 +97,7 @@ export function registerDnsCli(program: Command) {
     .description("DNS helpers for wide-area discovery (Tailscale + CoreDNS)")
     .addHelpText(
       "after",
-      () => `\n${theme.muted("Docs:")} ${formatDocsLink("/cli/dns", "docs.molt.bot/cli/dns")}\n`,
+      () => `\n${theme.muted("Docs:")} ${formatDocsLink("/cli/dns", "docs.360bot.com/cli/dns")}\n`,
     );
 
   dns
@@ -134,7 +134,7 @@ export function registerDnsCli(program: Command) {
         }).trimEnd(),
       );
       defaultRuntime.log("");
-      defaultRuntime.log(theme.heading("Recommended ~/.clawdbot/moltbot.json:"));
+      defaultRuntime.log(theme.heading("Recommended ~/.360bot/360bot.json:"));
       defaultRuntime.log(
         JSON.stringify(
           {

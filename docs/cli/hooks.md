@@ -85,7 +85,7 @@ Details:
   Source: moltbot-bundled
   Path: /path/to/moltbot/hooks/bundled/session-memory/HOOK.md
   Handler: /path/to/moltbot/hooks/bundled/session-memory/handler.ts
-  Homepage: https://docs.molt.bot/hooks#session-memory
+  Homepage: https://docs.360bot.com/hooks#session-memory
   Events: command:new
 
 Requirements:

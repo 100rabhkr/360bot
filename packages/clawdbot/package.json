@@ -11,6 +11,6 @@
     "moltbot": "./bin/moltbot.js"
   },
   "dependencies": {
-    "moltbot": "workspace:*"
+    "360bot": "workspace:*"
   }
 }

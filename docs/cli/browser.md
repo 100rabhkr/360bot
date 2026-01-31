@@ -53,7 +53,7 @@ moltbot browser --browser-profile work tabs
 
 ```bash
 moltbot browser tabs
-moltbot browser open https://docs.molt.bot
+moltbot browser open https://docs.360bot.com
 moltbot browser focus <targetId>
 moltbot browser close <targetId>
 ```

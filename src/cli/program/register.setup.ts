@@ -10,11 +10,11 @@ import { runCommandWithRuntime } from "../cli-utils.js";
 export function registerSetupCommand(program: Command) {
   program
     .command("setup")
-    .description("Initialize ~/.clawdbot/moltbot.json and the agent workspace")
+    .description("Initialize ~/.360bot/360bot.json and the agent workspace")
     .addHelpText(
       "after",
       () =>
-        `\n${theme.muted("Docs:")} ${formatDocsLink("/cli/setup", "docs.molt.bot/cli/setup")}\n`,
+        `\n${theme.muted("Docs:")} ${formatDocsLink("/cli/setup", "docs.360bot.com/cli/setup")}\n`,
     )
     .option(
       "--workspace <dir>",
